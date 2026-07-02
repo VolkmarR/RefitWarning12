@@ -1,0 +1,17 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+    <PropertyGroup>
+        <TargetFramework>net10.0</TargetFramework>
+        <Nullable>enable</Nullable>
+        <ImplicitUsings>enable</ImplicitUsings>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="Refit.HttpClientFactory" Version="13.0.0" />
+    </ItemGroup>
+
+    <!-- by adding this, the testproject shows the "PrimitivesR3BridgeGeneratedAttribute.g.cs(2,61): Warning CS0436" -->
+    <ItemGroup>
+        <InternalsVisibleTo Include="TestProject1" />
+    </ItemGroup>
+</Project>
